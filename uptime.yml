@@ -1,0 +1,10 @@
+---
+- hosts: db
+
+  tasks:
+    - name: Get Uptime
+      command: uptime
+      register: uptime_output
+
+    - ansible.builtin.debug:
+        var: uptime_output.stdout_lines

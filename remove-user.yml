@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Remove User {{ user }}
+    ansible.builtin.user:
+      name: "{{ user }}"
+      state: absent
+      remove: yes

@@ -3,8 +3,7 @@ tnode1
 tnode2
 
 [db]
-tnode3
+tnode3 
 
-[all:children]
-web
-db
+[all:vars]
+user=ansible
